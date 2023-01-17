@@ -8,5 +8,6 @@ module.exports = {
   defaultLocale: 'en',
   pages: {
     '*': ['common'],
+    '/home': ['page/home'],
   },
 };
