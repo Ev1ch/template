@@ -1,12 +1,11 @@
 import { createTheme } from '@mui/material/styles';
-import { merge } from 'lodash';
 
-import defaultThemeOptions from './defaultThemeOptions';
+import { mergeWithDefaultOptions } from '../utils';
 
 const darkTheme = createTheme(
-  merge(defaultThemeOptions, {
+  mergeWithDefaultOptions({
     palette: {
-      mode: 'dark' as const,
+      mode: 'dark',
     },
   }),
 );
