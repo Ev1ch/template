@@ -9,16 +9,13 @@ export default function Home() {
   return <>{t('common:company.name')}</>;
 }
 
-export const getStaticProps = wrapper.getStaticProps(
-  () =>
-    async ({ locale }) => {
-      const t = await getT(locale, ['pages/home']);
-      const title = t('pages/home:meta.title');
+export const getStaticProps = wrapper.getStaticProps(() => async ({ locale }) => {
+  const t = await getT(locale, ['pages/home']);
+  const title = t('pages/home:meta.title');
 
-      return {
-        props: {
-          title,
-        },
-      };
+  return {
+    props: {
+      title,
     },
-);
+  };
+});

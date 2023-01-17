@@ -1,7 +1,4 @@
-import {
-  useSelector as useReduxSelector,
-  type TypedUseSelectorHook,
-} from 'react-redux';
+import { useSelector as useReduxSelector, type TypedUseSelectorHook } from 'react-redux';
 
 import type { State } from '../types';
 

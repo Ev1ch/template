@@ -1,4 +1,3 @@
-const getActionNameCreator = (slice: string) => (name: string) =>
-  `${slice}/${name}`;
+const getActionNameCreator = (slice: string) => (name: string) => `${slice}/${name}`;
 
 export default getActionNameCreator;

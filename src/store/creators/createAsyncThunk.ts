@@ -12,13 +12,9 @@ const createAsyncThunk = <Returned = void, Argument = void>(
   payloadCreator: AsyncThunkPayloadCreator<Returned, Argument, ThunkOptions>,
   options?: AsyncThunkOptions<Argument, ThunkOptions>,
 ) =>
-  createReduxAsyncThunk<Returned, Argument, ThunkOptions>(
-    typePrefix,
-    payloadCreator,
-    {
-      serializeError: serialize,
-      ...options,
-    },
-  );
+  createReduxAsyncThunk<Returned, Argument, ThunkOptions>(typePrefix, payloadCreator, {
+    serializeError: serialize,
+    ...options,
+  });
 
 export default createAsyncThunk;

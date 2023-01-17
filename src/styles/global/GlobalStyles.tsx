@@ -1,7 +1,4 @@
-import {
-  CssBaseline,
-  GlobalStyles as UiGlobalStyles,
-} from '@/components/common';
+import { CssBaseline, GlobalStyles as UiGlobalStyles } from '@/components/common';
 import styles from './styles';
 
 export default function GlobalStyles() {

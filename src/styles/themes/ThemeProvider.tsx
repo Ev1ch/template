@@ -19,7 +19,5 @@ const themes = {
 export default function ThemeProvider({ children }: ThemeProviderProps) {
   const themeMode = useSelector(selectThemeMode);
 
-  return (
-    <UiThemeProvider theme={themes[themeMode]}>{children}</UiThemeProvider>
-  );
+  return <UiThemeProvider theme={themes[themeMode]}>{children}</UiThemeProvider>;
 }
