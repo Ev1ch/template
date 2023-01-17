@@ -8,7 +8,7 @@ export default function GlobalStyles() {
   return (
     <>
       <CssBaseline />
-      <UiGlobalStyles styles={styles} />;
+      <UiGlobalStyles styles={styles} />
     </>
   );
 }
