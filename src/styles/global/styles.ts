@@ -1,7 +1,3 @@
-const styles = {
-  body: {
-    margin: 0,
-  },
-};
+const styles = {};
 
 export default styles;
