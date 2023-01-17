@@ -6,7 +6,10 @@ import type { AppProps as NextAppProps } from 'next/app';
 import type { Page } from '@/core/types';
 import { DEFAULT_TITLE } from '@/core/constants';
 import { Layout } from '@/components/layouts';
+import { Box } from '@/components/common';
+import { GlobalStyles } from '@/styles/global';
 import wrapper from '@/store';
+import { roboto } from '@/styles/fonts';
 import { useTranslation } from '#/localization/hooks';
 
 interface AppProps extends NextAppProps {
@@ -25,8 +28,10 @@ export default function App({ Component, ...props }: AppProps) {
       <Head>
         <title>{updatedProps.pageProps.title ?? t(DEFAULT_TITLE)}</title>
       </Head>
-
-      {getLayout(<Component {...updatedProps.pageProps} />)}
+      <Box className={roboto.className}>
+        <GlobalStyles />
+        {getLayout(<Component {...updatedProps.pageProps} />)}
+      </Box>
     </Provider>
   );
 }
