@@ -1,7 +1,4 @@
 {
-  "*.{ts,ts}": [
-    "yarn prettier",
-    "yarn eslint"
-  ],
-  "*.{json}": "yarn prettier"
+  "*.{ts,ts}": ["yarn prettier", "yarn eslint"],
+  "*.json": "yarn prettier"
 }
