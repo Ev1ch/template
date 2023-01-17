@@ -5,7 +5,6 @@ import type { AppProps as NextAppProps } from 'next/app';
 import { CacheProvider, EmotionCache } from '@emotion/react';
 
 import type { Page } from '@/core/types';
-import { Input, TextField, Typography } from '@/components/common';
 import { DEFAULT_TITLE } from '@/core/constants';
 import { Layout } from '@/components/layouts';
 import { GlobalStyles } from '@/styles/global';
@@ -27,8 +26,7 @@ export default function App({ Component, ...props }: AppProps) {
   const stylesCache = updatedProps.emotionCache ?? clientSideStylesCache;
   const title = updatedProps.pageProps.title ?? t(DEFAULT_TITLE);
 
-  const getLayout =
-    Component.getLayout ?? ((page: ReactNode) => <Layout>{page}</Layout>);
+  const getLayout = Component.getLayout ?? ((page: ReactNode) => <Layout>{page}</Layout>);
 
   return (
     <Provider store={store}>
@@ -39,6 +37,7 @@ export default function App({ Component, ...props }: AppProps) {
         </Head>
         <ThemeProvider>
           <GlobalStyles />
+          {/* eslint-disable-next-line react/jsx-props-no-spreading */}
           {getLayout(<Component {...updatedProps.pageProps} />)}
         </ThemeProvider>
       </CacheProvider>

@@ -2,7 +2,6 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 import type { State } from '@/store/types';
 import { ThemeMode } from '@/styles/types';
-import { getActionNameCreator } from '@/store/utils';
 
 interface UiState {
   theme: {
@@ -18,8 +17,6 @@ const initialState: UiState = {
 
 const name = 'ui';
 
-const getActionName = getActionNameCreator(name);
-
 const slice = createSlice({
   name,
   initialState,
@@ -28,7 +25,6 @@ const slice = createSlice({
       state.theme.mode = payload;
     },
   },
-  extraReducers(builder) {},
 });
 
 export const selectTheme = (state: State) => state.ui.theme;
