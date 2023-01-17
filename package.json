@@ -3,10 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "start": "next dev",
+    "start:prod": "next start",
     "build": "next build",
-    "start": "next start",
     "lint": "next lint",
+    "eslint": "eslint --cache --ignore-path .gitignore",
+    "eslint:fix": "eslint --cache --fix --ignore-path .gitignore",
+    "prettier": "prettier --check --ignore-path .gitignore",
+    "prettier:fix": "prettier --write --ignore-path .gitignore",
     "prepare": "husky install"
   },
   "dependencies": {
