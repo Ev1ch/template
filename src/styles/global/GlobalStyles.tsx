@@ -1,11 +1,12 @@
-import { CssBaseline, GlobalStyles as UiGlobalStyles } from '@/components/common';
+import { CssBaseline, GlobalStyles as MuiGlobalStyles } from '@mui/material';
+
 import styles from './styles';
 
 export default function GlobalStyles() {
   return (
     <>
       <CssBaseline />
-      <UiGlobalStyles styles={styles} />
+      <MuiGlobalStyles styles={styles} />
     </>
   );
 }

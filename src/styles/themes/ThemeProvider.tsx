@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
+import { ThemeProvider as MuiThemeProvider } from '@mui/material';
 
-import { ThemeProvider as UiThemeProvider } from '@/components/common';
 import { useSelector } from '@/store/hooks';
 import { selectThemeMode } from '@/modules/ui/slice';
 import { ThemeMode } from '../types';
@@ -19,5 +19,5 @@ const themes = {
 export default function ThemeProvider({ children }: ThemeProviderProps) {
   const themeMode = useSelector(selectThemeMode);
 
-  return <UiThemeProvider theme={themes[themeMode]}>{children}</UiThemeProvider>;
+  return <MuiThemeProvider theme={themes[themeMode]}>{children}</MuiThemeProvider>;
 }
